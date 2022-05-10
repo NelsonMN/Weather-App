@@ -1,7 +1,12 @@
+:root {
+    --font: 'Libre Franklin', sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: var(--font);
 }
 
 a {
@@ -12,20 +17,60 @@ a {
 body {
     height: 100vh;
 }
+
+/* Header */
+
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
+    justify-content: center;
+    padding: 2rem 1rem;
+    font-size: 1.75rem;
 }
 
+/* Body */
+
 .body {
-    min-height: calc(100vh - 98.5px)
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 11.406rem);
 }
+
+#form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#search {
+    height: 2rem;
+    width: 12rem;
+    border-radius: 8px;
+    border: solid 1px black;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+}
+
+#submit {
+    font-size: 1.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+textarea:focus, 
+input:focus{
+    outline: none;
+}
+
+
+
+/* Footer */
 
 .footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 15px;
+    padding: 1rem 1rem;
 }
