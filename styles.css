@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--font);
+    font-weight: 200;
 }
 
 a {
@@ -27,7 +28,7 @@ body {
     justify-content: center;
     padding: 2rem 1rem 0;
     font-size: 1.75rem;
-    gap: 1.25rem;
+    gap: 2rem;
 }
 
 #title {
@@ -56,6 +57,11 @@ body {
     cursor: pointer;
 }
 
+textarea:focus, 
+input:focus{
+    outline: none;
+}
+
 /* Body */
 
 .body {
@@ -63,20 +69,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: calc(100vh - 14.031rem);
-}
-
-
-.weather {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-textarea:focus, 
-input:focus{
-    outline: none;
+    min-height: calc(100vh - 15.156rem);
 }
 
 /* Weather */
@@ -84,8 +77,19 @@ input:focus{
 .weather {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
+    border-radius: 0.75rem;
     padding: 2rem;
+}
+
+#degree {
+    padding: .5rem;
+    border-radius: 50%;
+    border: solid black 1px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .main-view {
@@ -103,15 +107,13 @@ input:focus{
 
 .main-view > div > .main {
     font-size: 5rem;
-    font-weight: 200;
 }
 
 .details-view {
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     gap: 2rem;
     width: 100%;
-    font-weight: 100;
 }
 
 .temp-scale {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <script src="app.js" defer></script>
+    <script type="module" src="/scripts/ui.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 
         <form id="form">
             <input type="text" id="search" name="search">
-            <span id="submit" class="material-icons-outlined" type="submit">search</button></span>
+            <span id="submit" class="material-icons-outlined" type="submit">search</span>
         </form>
     </div>
 
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="forecast-container">
-                    <h3 id="weather-reading" class="main">Clear</h3>
+                    <h3 id="weather-forecast" class="main">Clear</h3>
                     <h3 id="weather-description">clear sky</h3>
                 </div>
             </div>
