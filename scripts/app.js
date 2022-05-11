@@ -1,5 +1,5 @@
-import updateAppUI from "./ui";
-import {fetchData, processData} from "./weather"
+import updateAppUI from "./ui.js";
+import {fetchData, processData} from "./weather.js";
 
 const search = document.getElementById('submit');
 const input = document.getElementById('search');
@@ -11,7 +11,10 @@ search.addEventListener('click', (e) => {
     }
     // fetch weather data
     const initialOutput = fetchData(searchInput)
-    processData(initialOutput)
+    console.log(initialOutput)
+    const data = processData(initialOutput)
+    console.log(data)
+    updateAppUI(data)
     // input weather data into the elements in the DOM
     input.value = ''
 });

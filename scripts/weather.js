@@ -27,4 +27,4 @@ function processData(dataPromise) {
     })
 }
 
-export {fetchData, processData}
+export { fetchData, processData }
