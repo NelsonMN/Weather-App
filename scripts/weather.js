@@ -6,25 +6,19 @@ async function fetchData(city) {
             throw new Error(`City "${city}" not found`);
         }
         const weatherData = await response.json();
-        console.log(weatherData)
         return weatherData
-    } catch (error){
+    } catch(error) {
         alert(error)
     }
 };
 
-function processData(dataPromise) {
-    dataPromise.then(result => {
-        const formattedData = {
-            main: {temp: `${result.main.temp}\u00B0`, city: `${result.name}`, country: `${result.sys.country}`},
-            weather: {forecast: `${result.weather[0].main}`, description: `${result.weather[0].description}`},
-            details: {humidity: `${result.main.humidity}`, pressure: `${result.main.pressure}`, minTemp: `${result.main.temp_min}`, maxTemp: `${result.main.temp_max}`, feelsLike: `${result.main.feels_like}`}
-        }
-        console.log(formattedData)
-        return formattedData
-    }).catch(() => {
-        return
-    })
+function processData(data) {
+    const formattedData = {
+        main: {temp: `${data.main.temp}\u00B0`, city: `${data.name}`, country: `${data.sys.country}`},
+        weather: {forecast: `${data.weather[0].main}`, description: `${data.weather[0].description}`},
+        details: {humidity: `${data.main.humidity}`, pressure: `${data.main.pressure}`, minTemp: `${data.main.temp_min}`, maxTemp: `${data.main.temp_max}`, feelsLike: `${data.main.feels_like}`}
+    }
+    return formattedData
 }
 
 export { fetchData, processData }

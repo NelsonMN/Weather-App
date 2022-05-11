@@ -11,10 +11,13 @@ search.addEventListener('click', (e) => {
     }
     // fetch weather data
     const initialOutput = fetchData(searchInput)
-    console.log(initialOutput)
-    const data = processData(initialOutput)
-    console.log(data)
-    updateAppUI(data)
+    initialOutput.then((data) => {
+        const formattedData = processData(data)
+        updateAppUI(formattedData)
+    }).catch(()=> {
+        return
+    })
+    // updateAppUI(data)
     // input weather data into the elements in the DOM
     input.value = ''
 });
