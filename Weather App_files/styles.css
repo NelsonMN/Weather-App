@@ -1,9 +1,8 @@
 :root {
     --font: 'Libre Franklin', sans-serif;
     --accent-color: rgb(238, 80, 7);
-    --background-accent: rgb(251, 250, 245);
-    --display-background: rgb(247, 235, 218);
-    --header-background: rgb(160, 159, 159);
+    --background: rgb(251, 250, 245);
+    --display-background: rgb(249, 240, 229);
 }
 
 * {
@@ -21,7 +20,6 @@ a {
 
 body {
     height: 100vh;
-    background-image: linear-gradient(var(--display-background), var(--header-background), var(--display-background));
 }
 
 /* Header */
@@ -31,7 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
     font-size: 1.75rem;
     gap: 2rem;
 }
@@ -55,7 +53,6 @@ body {
     border: solid 1px black;
     padding-left: 0.75rem;
     font-size: 1rem;
-    border: none;
 }
 
 .submit-button {
@@ -65,13 +62,13 @@ body {
     border-radius: 50%;
     border: none;
     background-color: var(--accent-color);
-    transition: .75s;
+    transition: .5s;
     opacity: 0.6;
 }
 
 .submit-button:hover {
     opacity: 1;
-    transition: .75s;
+    transition: .5s;
 }
 
 #submit {
@@ -92,7 +89,8 @@ input:focus{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: calc(100vh - 17.656rem);
+    min-height: calc(100vh - 15.156rem);
+    background-color: var(--display-background);
 }
 
 /* Weather */
@@ -112,35 +110,33 @@ input:focus{
     border-radius: 0.75rem;
     padding: 2rem;
     box-shadow: rgba(147, 147, 147, 0.35) 0rem .3125rem 1rem;
-    background-color: var(--background-accent);
-    margin-bottom: 6rem;
+    background-color: var(--background);
 }
 
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
-  
-  @-moz-keyframes fadeIn {
+    }
+    
+    @-moz-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes fadeIn {
+    }
+    
+    @-webkit-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
-  
-  @-o-keyframes fadeIn {
+    }
+    
+    @-o-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
-  
-  @-ms-keyframes fadeIn {
+    }
+    
+    @-ms-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
-
+    }
 
 
 #degree {
@@ -153,13 +149,12 @@ input:focus{
     cursor: pointer;
     background-color: var(--accent-color);
     color: white;
-    transition: .75s;
+    transition: .5s;
     font-weight: 300;
-    opacity: 0.6;
 }
 
 #degree:hover {
-    opacity: 1;
+    background-color: var(--button-hover);
     transition: .75s;
 }
 

@@ -18,6 +18,7 @@ search.addEventListener('click', (e) => {
     }).catch(() => {
         return
     })
+
     input.value = ''
 });
 
