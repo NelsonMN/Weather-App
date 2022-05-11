@@ -25,9 +25,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
     font-size: 1.75rem;
-    gap: 1.5rem;
+    gap: 1.25rem;
+}
+
+#title {
+    font-weight: 400;
 }
 
 #form {
@@ -37,19 +41,9 @@ body {
     padding: 0.5rem 1rem;
 }
 
-/* Body */
-
-.body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: calc(100vh - 16.156rem);
-}
-
 #search {
-    height: 2rem;
-    width: 12rem;
+    height: 2.5rem;
+    width: 15rem;
     border-radius: 8px;
     border: solid 1px black;
     padding-left: 0.75rem;
@@ -57,10 +51,21 @@ body {
 }
 
 #submit {
-    font-size: 1.75rem;
+    font-size: 2rem;
     border-radius: 50%;
     cursor: pointer;
 }
+
+/* Body */
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 14.031rem);
+}
+
 
 .weather {
     display: flex;
@@ -74,8 +79,46 @@ input:focus{
     outline: none;
 }
 
+/* Weather */
 
+.weather {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 2rem;
+}
 
+.main-view {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.main-view > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-view > div > .main {
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.details-view {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    font-weight: 100;
+}
+
+.temp-scale {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
 /* Footer */
 
 .footer {

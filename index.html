@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400&display=swap" rel="stylesheet"></head>
 <body>
 
     <div class="header">
@@ -27,47 +26,47 @@
         
         <div class="weather">
 
-            <div class="temp-scales">
-                <button>&deg;C</button>
+            <div class="temp-scale">
+                <button id="degree">&deg;C</button>
             </div>
 
             <div class="main-view">
                 <div class="temp-container">
-                    <h3 id="temp-reading"></h3>
-                    <h3 id="city-country"></h3>
+                    <h3 id="temp-reading" class="main">17.5&deg;</h3>
+                    <h3 id="city-country">Toronto, CA</h3>
                 </div>
 
                 <div class="forecast-container">
-                    <h3 id="weather-reading"></h3>
-                    <h3 id="weather-description"></h3>
+                    <h3 id="weather-reading" class="main">Clear</h3>
+                    <h3 id="weather-description">clear sky</h3>
                 </div>
             </div>
 
-            <div class="bottom-view">
+            <div class="details-view">
 
                 <div class="humidity-container">
-                    <h3 id="humidity"></h3>
-                    <h3 id="humidity-reading"></h3>
+                    <h3 id="humidity">Humidity</h3>
+                    <h3 id="humidity-reading">28&#37;</h3>
                 </div>
 
                 <div class="pressure-container">
-                    <h3 id="pressure"></h3>
-                    <h3 id="pressure-reading"></h3>
+                    <h3 id="pressure">Pressure</h3>
+                    <h3 id="pressure-reading">1025mb</h3>
                 </div>
 
                 <div class="min-temp-container">
-                    <h3 id="min-temp"></h3>
-                    <h3 id="min-temp-reading"></h3>
+                    <h3 id="min-temp">Min temp</h3>
+                    <h3 id="min-temp-reading">13.4&deg;</h3>
                 </div>
 
                 <div class="max-temp-container">
-                    <h3 id="max-temp"></h3>
-                    <h3 id="max-temp-reading"></h3>
+                    <h3 id="max-temp">Max temp</h3>
+                    <h3 id="max-temp-reading">20.9&deg;</h3>
                 </div>
 
                 <div class="feels-like-container">
-                    <h3 id="feels-like"></h3>
-                    <h3 id="feels-like-reading"></h3>
+                    <h3 id="feels-like">Feels like</h3>
+                    <h3 id="feels-like-reading">16&deg;</h3>
                 </div>
 
             </div>
@@ -76,7 +75,7 @@
     </div>
 
     <div class="footer">
-        <h3>Created By: <a href="https://github.com/NelsonMN">Nelson Mieszkalski</a></h3>
+        <h3>Created By: <a href="https://github.com/NelsonMN">NelsonMN</a></h3>
     </div>
 
 </body>
