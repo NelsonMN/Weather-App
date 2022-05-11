@@ -14,9 +14,9 @@ async function fetchData(city) {
 
 function processData(data) {
     const formattedData = {
-        main: {temp: `${data.main.temp}\u00B0`, city: `${data.name}`, country: `${data.sys.country}`},
+        main: {temp: `${Math.round(data.main.temp * 10)/10}\u00B0`, city: `${data.name}`, country: `${data.sys.country}`},
         weather: {forecast: `${data.weather[0].main}`, description: `${data.weather[0].description}`},
-        details: {humidity: `${data.main.humidity}`, pressure: `${data.main.pressure}`, minTemp: `${data.main.temp_min}`, maxTemp: `${data.main.temp_max}`, feelsLike: `${data.main.feels_like}`}
+        details: {humidity: `${data.main.humidity}`, pressure: `${data.main.pressure}`, minTemp: `${Math.round(data.main.temp_min * 10)/10}`, maxTemp: `${Math.round(data.main.temp_max*10)/10}`, feelsLike: `${Math.round(data.main.feels_like*10)/10}`}
     }
     return formattedData
 }

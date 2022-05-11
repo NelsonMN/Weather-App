@@ -5,6 +5,7 @@ const search = document.getElementById('submit');
 const input = document.getElementById('search');
 
 search.addEventListener('click', (e) => {
+    e.preventDefault()
     let searchInput = input.value
     if (searchInput == '') {
         alert('Please fill in a city')
@@ -14,10 +15,15 @@ search.addEventListener('click', (e) => {
     initialOutput.then((data) => {
         const formattedData = processData(data)
         updateAppUI(formattedData)
-    }).catch(()=> {
+    }).catch(() => {
         return
     })
     // updateAppUI(data)
     // input weather data into the elements in the DOM
     input.value = ''
 });
+
+fetchData('Toronto').then(data => {
+    updateAppUI(processData(data))
+    }
+)
