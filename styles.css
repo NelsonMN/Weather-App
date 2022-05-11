@@ -40,7 +40,8 @@ body {
     font-weight: 400;
 }
 
-#form {
+#form,
+.form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,6 +57,16 @@ body {
     padding-left: 0.75rem;
     font-size: 1rem;
     border: none;
+}
+
+.error {
+    display: none;
+}
+
+.error.active{
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: center;
 }
 
 .submit-button {
@@ -113,7 +124,7 @@ input:focus{
     padding: 2rem;
     box-shadow: rgba(147, 147, 147, 0.35) 0rem .3125rem 1rem;
     background-color: var(--background-accent);
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
 }
 
 @keyframes fadeIn {

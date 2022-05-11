@@ -16,9 +16,14 @@
     <div class="header">
         <h1 id="title">Better Weather</h1>
 
-        <form id="form">
-            <input type="text" id="search" name="submit">
-            <button id="submit-button" class="submit-button" type="submit"><span id="submit" class="material-icons-outlined">search</span></button>
+        <form>
+            <div id="form" class="">
+                <input type="text" id="search" name="submit" placeholder="Place a city here" required>
+                <button error-input id="submit-button" class="submit-button" type="submit"><span id="submit" class="material-icons-outlined">search</span></button>
+            </div>
+            <div id="error">
+                <span class="error"></span>
+            </div>
         </form>
     </div>
 
