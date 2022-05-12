@@ -3,7 +3,7 @@
     --accent-color: rgb(238, 80, 7);
     --background-accent: rgb(251, 250, 245);
     --display-background: rgb(247, 235, 218);
-    --header-background: rgb(160, 159, 159);
+    --header-background: rgb(244, 195, 150);
 }
 
 * {
@@ -59,13 +59,19 @@ body {
     border: none;
 }
 
+#error-container {
+    display: flex;
+    height: 1.219rem;
+}
+
 .error {
-    display: none;
+    visibility: hidden;
     font-size: 1rem;
-    padding: .5rem 1rem;
+    padding-left: 3rem;
 }
 
 .error.active{
+    visibility: visible;
     display: flex;
     justify-content: flex-start;
 }
@@ -104,7 +110,7 @@ input:focus{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: calc(100vh - 17.656rem);
+    min-height: calc(100vh - 18.875rem);
 }
 
 /* Weather */
@@ -127,33 +133,6 @@ input:focus{
     background-color: var(--background-accent);
     margin-bottom: 7rem;
 }
-
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-
-
 
 #degree {
     padding: .5rem;
@@ -218,3 +197,40 @@ input:focus{
     justify-content: center;
     padding: 1rem 1rem;
 }
+
+#author {
+    transition: 0.5s;
+    font-size: 1.17rem;
+}
+
+#author:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }

@@ -1,5 +1,6 @@
 // Fetch Weather using API
 const error = document.getElementById("error");
+const search = document.getElementById("search");
 
 async function fetchData(city) {
   try {
@@ -12,6 +13,7 @@ async function fetchData(city) {
     }
     const weatherData = await response.json();
     error.classList.remove("active");
+    error.textContent = "";
     return weatherData;
   } catch (err) {
     if (error.textContent == "") {
@@ -19,6 +21,7 @@ async function fetchData(city) {
       error.classList.add("active");
     } else {
       error.textContent = `${err}`;
+      error.classList.add("active");
     }
   }
 }

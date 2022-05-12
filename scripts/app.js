@@ -12,11 +12,13 @@ search.addEventListener("click", (e) => {
     .then((data) => {
       const formattedData = processData(data);
       updateAppUI(formattedData);
+      input.value = "";
     })
     .catch(() => {
+      input.value = "";
       return;
     });
-  input.value = "";
+  
 });
 
 // Load Toronto
