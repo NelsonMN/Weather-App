@@ -51,6 +51,7 @@ function updateAppUI(data) {
   minTemp.textContent = `${data.details.minTemp}\u00B0`;
   maxTemp.textContent = `${data.details.maxTemp}\u00B0`;
   feelsLike.textContent = `${data.details.feelsLike}\u00B0`;
+  degree.textContent = '\u00B0C'
 }
 
 export default updateAppUI;
