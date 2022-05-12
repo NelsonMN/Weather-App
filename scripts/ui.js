@@ -24,27 +24,6 @@ function toFarenheit(temp){
     return (Math.round((adjustedTemp * (9/5) + 32)*10)/10)
 }
 
-// Form Validation API:
-const errorInput = document.querySelector('[error-input]')
-const search = document.getElementById('search')
-const error = document.querySelector('.error')
-
-errorInput.addEventListener('input', () => {
-    if (search.validity.valid) {
-        error.textContent = ''
-        error.className = 'error'
-    } else {
-        showError()
-    }
-})
-
-function showError() {
-    if (search.validity.valueMissing) {
-        error.textContent = 'You need to enter a city';
-        error.className = 'error active';
-    }
-}
-
 // Degree Changer
 degree.addEventListener('click', (e) => {
     let measurement = e.target.textContent
@@ -75,4 +54,4 @@ function updateAppUI(data) {
     feelsLike.textContent = `${data.details.feelsLike}\u00B0`
 }
 
-export { updateAppUI, showError }
+export default updateAppUI

@@ -1,4 +1,6 @@
 // Fetch Weather using API
+const error = document.getElementById('error')
+
 async function fetchData(city) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=84f293469f95029376a49c8dbfc2b1d4`, {mode: 'cors'});
@@ -6,9 +8,15 @@ async function fetchData(city) {
             throw new Error(`City "${city}" not found`);
         }
         const weatherData = await response.json();
+        error.classList.remove('active');
         return weatherData
-    } catch(error) {
-        alert(error)
+    } catch(err) {
+        if (error.textContent == '') {
+        error.textContent = 'You need to enter a city.';
+        error.classList.add('active');
+        } else {
+            error.textContent = `${err}`
+        }
     }
 };
 
