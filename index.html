@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<body>
+    <script src="main.js"></script>
+    <div class="header">
+        <h1 id="title">Better Weather</h1>
+
+        <form>
+            <div id="form" class="">
+                <input type="text" id="search" name="submit" placeholder="Place a city here">
+                <button id="submit-button" class="submit-button" type="submit"><span id="submit" class="material-symbols-outlined">search</span></button>
+            </div>
+            <div id="error-container">
+                <span id="error" class="error"></span>
+            </div>
+        </form>
+    </div>
+
+    <div class="body">
+        
+        <div class="weather">
+
+            <div class="temp-scale">
+                <button id="degree">&deg;C</button>
+            </div>
+
+            <div class="main-view">
+                <div class="temp-container">
+                    <h3 id="temp-reading" class="main"></h3>
+                    <h3 id="city-country"></h3>
+                </div>
+
+                <div class="forecast-container">
+                    <h3 id="weather-forecast" class="main"></h3>
+                    <h3 id="weather-description"></h3>
+                </div>
+            </div>
+
+            <div class="details-view">
+
+                <div class="humidity-container">
+                    <h3 id="humidity">Humidity</h3>
+                    <h3 id="humidity-reading"></h3>
+                </div>
+
+                <div class="pressure-container">
+                    <h3 id="pressure">Pressure</h3>
+                    <h3 id="pressure-reading"></h3>
+                </div>
+
+                <div class="min-temp-container">
+                    <h3 id="min-temp">Min temp</h3>
+                    <h3 id="min-temp-reading"></h3>
+                </div>
+
+                <div class="max-temp-container">
+                    <h3 id="max-temp">Max temp</h3>
+                    <h3 id="max-temp-reading"></h3>
+                </div>
+
+                <div class="feels-like-container">
+                    <h3 id="feels-like">Feels like</h3>
+                    <h3 id="feels-like-reading"></h3>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a id="author" href="https://github.com/NelsonMN">Created By: NelsonMN</a>
+    </div>
+</body>
+</html>
