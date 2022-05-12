@@ -1,5 +1,5 @@
-import updateAppUI from "./ui.js";
-import { fetchData, processData } from "./weather.js";
+import updateAppUI from "./ui";
+import { fetchData, processData } from "./weather";
 
 const search = document.getElementById("submit-button");
 const input = document.getElementById("search");
