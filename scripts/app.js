@@ -18,7 +18,6 @@ search.addEventListener("click", (e) => {
       input.value = "";
       return;
     });
-  
 });
 
 // Load Toronto

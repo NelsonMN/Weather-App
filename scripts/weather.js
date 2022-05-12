@@ -1,6 +1,5 @@
 // Fetch Weather using API
 const error = document.getElementById("error");
-const search = document.getElementById("search");
 
 async function fetchData(city) {
   try {
