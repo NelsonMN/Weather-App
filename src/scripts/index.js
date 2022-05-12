@@ -1,28 +1,27 @@
-import "./styles.css"
-import updateAppUI from "./ui";
-import { fetchData, processData } from "./weather";
+import './styles.css';
+import updateAppUI from './ui';
+import { fetchData, processData } from './weather';
 
-const search = document.getElementById("submit-button");
-const input = document.getElementById("search");
+const search = document.getElementById('submit-button');
+const input = document.getElementById('search');
 
-search.addEventListener("click", (e) => {
+search.addEventListener('click', (e) => {
   e.preventDefault();
-  let searchInput = input.value;
+  const searchInput = input.value;
   const initialOutput = fetchData(searchInput);
   initialOutput
     .then((data) => {
       const formattedData = processData(data);
       updateAppUI(formattedData);
-      input.value = "";
+      input.value = '';
     })
     .catch(() => {
-      input.value = "";
-      return;
+      input.value = '';
     });
 });
 
 // Load Toronto
 
-fetchData("Toronto").then((data) => {
+fetchData('Toronto').then((data) => {
   updateAppUI(processData(data));
 });

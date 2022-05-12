@@ -1,39 +1,39 @@
-const tempReading = document.getElementById("temp-reading");
-const cityCountry = document.getElementById("city-country");
+const tempReading = document.getElementById('temp-reading');
+const cityCountry = document.getElementById('city-country');
 
-const weatherForecast = document.getElementById("weather-forecast");
-const weatherDescription = document.getElementById("weather-description");
+const weatherForecast = document.getElementById('weather-forecast');
+const weatherDescription = document.getElementById('weather-description');
 
-const humidity = document.getElementById("humidity-reading");
-const pressure = document.getElementById("pressure-reading");
-const minTemp = document.getElementById("min-temp-reading");
-const maxTemp = document.getElementById("max-temp-reading");
-const feelsLike = document.getElementById("feels-like-reading");
+const humidity = document.getElementById('humidity-reading');
+const pressure = document.getElementById('pressure-reading');
+const minTemp = document.getElementById('min-temp-reading');
+const maxTemp = document.getElementById('max-temp-reading');
+const feelsLike = document.getElementById('feels-like-reading');
 
-const degree = document.getElementById("degree");
+const degree = document.getElementById('degree');
 
 // Temperature to Celcius:
 function toCelcius(temp) {
-  let adjustedTemp = temp.slice(0, -1);
+  const adjustedTemp = temp.slice(0, -1);
   return Math.round((adjustedTemp - 32) * (5 / 9) * 10) / 10;
 }
 // Temperature to Fahrenheit:
 function toFarenheit(temp) {
-  let adjustedTemp = temp.slice(0, -1);
+  const adjustedTemp = temp.slice(0, -1);
   return Math.round((adjustedTemp * (9 / 5) + 32) * 10) / 10;
 }
 
 // Degree Changer
-degree.addEventListener("click", (e) => {
-  let measurement = e.target.textContent;
-  if (measurement == `\u00B0C`) {
-    e.target.textContent = `\u00B0F`;
+degree.addEventListener('click', (e) => {
+  const measurement = e.target.textContent;
+  if (measurement === '\u00B0C') {
+    e.target.textContent = '\u00B0F';
     tempReading.textContent = `${toFarenheit(tempReading.textContent)}\u00B0`;
     minTemp.textContent = `${toFarenheit(minTemp.textContent)}\u00B0`;
     maxTemp.textContent = `${toFarenheit(maxTemp.textContent)}\u00B0`;
     feelsLike.textContent = `${toFarenheit(feelsLike.textContent)}\u00B0`;
   } else {
-    e.target.textContent = `\u00B0C`;
+    e.target.textContent = '\u00B0C';
     tempReading.textContent = `${toCelcius(tempReading.textContent)}\u00B0`;
     minTemp.textContent = `${toCelcius(minTemp.textContent)}\u00B0`;
     maxTemp.textContent = `${toCelcius(maxTemp.textContent)}\u00B0`;

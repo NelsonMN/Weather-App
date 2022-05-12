@@ -28,7 +28,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--font);
-    font-weight: 200;
 }
 
 a {
@@ -58,7 +57,6 @@ body {
 }
 
 #title {
-    font-weight: 400;
     text-align: center;
 }
 
@@ -168,7 +166,7 @@ input:focus{
     background-color: var(--accent-color);
     color: white;
     transition: .75s;
-    font-weight: 300;
+    font-weight: 100;
     opacity: 0.6;
 }
 
@@ -193,6 +191,7 @@ input:focus{
 
 .main-view > div > .main {
     font-size: 5rem;
+    font-weight: 100;
 }
 
 .details-view {
@@ -204,7 +203,6 @@ input:focus{
 
 .details-view > div > h3:first-child {
     color: var(--accent-color);
-    font-weight: 300;
 }
 
 .temp-scale {
