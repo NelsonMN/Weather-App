@@ -20,7 +20,10 @@ a {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    width: 100vw;
     background-image: linear-gradient(var(--display-background), var(--header-background), var(--display-background));
 }
 
@@ -34,10 +37,12 @@ body {
     padding: 2rem 1rem;
     font-size: 1.75rem;
     gap: 2rem;
+    width: 100%;
 }
 
 #title {
     font-weight: 400;
+    text-align: center;
 }
 
 #form,
@@ -62,12 +67,12 @@ body {
 #error-container {
     display: flex;
     height: 1.219rem;
+    justify-content: center;
 }
 
 .error {
     visibility: hidden;
     font-size: 1rem;
-    padding-left: 3rem;
 }
 
 .error.active{
@@ -110,8 +115,9 @@ input:focus{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: calc(100vh - 18.875rem);
+    flex: 1;
 }
+
 
 /* Weather */
 
@@ -131,7 +137,7 @@ input:focus{
     padding: 2rem;
     box-shadow: rgba(147, 147, 147, 0.35) 0rem .3125rem 1rem;
     background-color: var(--background-accent);
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
 }
 
 #degree {
@@ -158,6 +164,7 @@ input:focus{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    text-align: center;
 }
 
 .main-view > div {
@@ -196,6 +203,8 @@ input:focus{
     align-items: center;
     justify-content: center;
     padding: 1rem 1rem;
+    margin-top: auto;
+    width: 100%;
 }
 
 #author {
